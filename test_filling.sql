@@ -28,7 +28,10 @@ VALUES
     (4, 'Сергей', 'Сергеев', 'sergeev@ya.ru'),
     (5, 'Алексей', 'Алексеев', 'alekseev@ya.ru'),
     (6, 'Федор', 'Федоров', 'fedorov@ya.ru'),
-    (7, 'Никита', 'Никитин', 'nikitin@ya.ru');
+    (7, 'Никита', 'Никитин', 'nikitin@ya.ru'),
+    (8, 'Дмитрий', 'Иванов', 'email@ya.ru'),
+    (9, 'Алексей', 'Иванов', 'ivanov1@ya.ru'),
+    (10, 'Никита', 'Петров', 'petrov2@ya.ru');
 
 INSERT INTO events.public.events (id, event_name, start_time, duration, program_id)
 VALUES
