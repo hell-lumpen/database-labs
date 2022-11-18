@@ -50,6 +50,7 @@ VALUES
     (4, 1),
     (5, 3),
     (1, 5),
+    (1, 1),
     (3, 2);
 
 INSERT INTO events.public.participants_of_events (participant_id, event_id)
