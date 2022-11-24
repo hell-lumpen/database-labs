@@ -36,4 +36,4 @@ FROM participants_of_events
     JOIN participants on participants.id = participants_of_events.participant_id
 GROUP BY first_name, last_name
 HAVING COUNT(participants_of_events.participant_id) <
-       FLOOR((SELECT COUNT(DISTINCT event_id) FROM participants_of_events) / 2)
+       FLOOR((SELECT COUNT(DISTINCT event_id) FROM participants_of_events) / 2);
