@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS events (
     id SERIAL PRIMARY KEY,
     event_name VARCHAR(70) NOT NULL,
     start_time TIME NOT NULL,
-    duration TIME NOT NULL,
+    duration INTEGER NOT NULL, -- минуты
     program_id INT NOT NULL REFERENCES programs(id)
 );
 

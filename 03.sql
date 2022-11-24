@@ -18,5 +18,7 @@ HAVING COUNT(participants_of_events.participant_id) > 2;
 
 SELECT organizers.first_name, organizers.last_name, COUNT(events.public.events.id) as number_of_events
 FROM organizers, events, organizers_of_events
-WHERE events.public.events.id = organizers_of_events.event_id AND organizers.id = organizers_of_events.event_id AND events.public.events.duration > '02:00:00'
+WHERE events.public.events.id = organizers_of_events.event_id AND
+      organizers.id = organizers_of_events.event_id AND
+      events.public.events.duration > '02:00:00'
 GROUP BY organizers.first_name, organizers.last_name;
