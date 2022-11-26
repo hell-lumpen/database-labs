@@ -9,7 +9,7 @@ SELECT id, event_name, start_time, program_id
 FROM events
 WHERE id != 7;
 
-INSERT INTO list_of_events_view1
+INSERT INTO modified_view
 VALUES (9, 'event_name', '10:00:00', 1);
 
 -- Создать представление по мероприятиям с указанием организатора (ФИО или названия организации) и названия программы
