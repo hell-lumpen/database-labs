@@ -4,10 +4,17 @@
 участия в различных программах, среднего числа участников его мероприятий, минимальный возраст участника
  */
 
+CREATE OR REPLACE VIEW modified_view AS
+SELECT id, event_name, start_time, program_id
+FROM events
+WHERE id != 7;
+
+INSERT INTO list_of_events_view1
+VALUES (9, 'event_name', '10:00:00', 1);
 
 -- Создать представление по мероприятиям с указанием организатора (ФИО или названия организации) и названия программы
 
-CREATE VIEW list_of_events_view AS
+CREATE OR REPLACE VIEW list_of_events_view AS
 SELECT program_name, event_name, first_name, last_name, company_name
 FROM programs
     JOIN events e on programs.id = e.program_id
@@ -24,7 +31,7 @@ ADD COLUMN age SMALLINT NOT NULL DEFAULT FLOOR(RANDOM() * (50-14 + 1) + 14);
 -- Создать итоговое представление по организаторам с указанием количества организованных мероприятий,
 -- участия в различных программах, среднего числа участников его мероприятий, минимальный возраст участника
 --
-CREATE VIEW organizer_stats AS
+CREATE OR REPLACE VIEW organizer_stats AS
 SELECT counts.first_name, counts.last_name, events_count, program_count, average_count, min_age
 FROM
     -- эта часть расчитывает среднее число участников мероприятий каждого организатора

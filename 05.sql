@@ -69,6 +69,14 @@ GROUP BY first_name, last_name;
 ALTER TABLE participants
 ADD COLUMN participant_gender CHAR NOT NULL DEFAULT 'М';
 
+INSERT INTO events.public.participants (id, first_name, last_name, email, age, participant_gender)
+VALUES
+    (13, 'Лиза', 'Завьялова', 'liza@ya.ru', 20, 'Ж');
+
+INSERT INTO events.public.participants_of_events (participant_id, event_id)
+VALUES
+    (13, 1);
+
 
 -- Вывести мероприятия с количеством участников мужского пола
 SELECT event_name, COUNT(participant_id)

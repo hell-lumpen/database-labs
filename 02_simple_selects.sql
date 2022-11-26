@@ -15,7 +15,7 @@ SELECT event_name, start_time FROM events.public.events
 WHERE program_id = 1;
 
 SELECT event_name, duration FROM events.public.events
-WHERE duration > '01:00:00' AND program_id = 1;
+WHERE duration > 60 AND program_id = 1;
 
 SELECT first_name, last_name FROM events.public.organizers
 WHERE company_id <> 3;
@@ -42,7 +42,7 @@ SELECT first_name, last_name FROM events.public.participants
 WHERE first_name LIKE 'А%й';
 
 SELECT first_name, last_name FROM events.public.participants
-WHERE last_name LIKE '%в';
+WHERE last_name LIKE '%ев';
 
 SELECT first_name, last_name FROM events.public.organizers
 WHERE last_name LIKE '_а%';

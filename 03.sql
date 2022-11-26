@@ -20,5 +20,5 @@ SELECT organizers.first_name, organizers.last_name, COUNT(events.public.events.i
 FROM organizers, events, organizers_of_events
 WHERE events.public.events.id = organizers_of_events.event_id AND
       organizers.id = organizers_of_events.event_id AND
-      events.public.events.duration > '02:00:00'
+      events.public.events.duration > 120
 GROUP BY organizers.first_name, organizers.last_name;

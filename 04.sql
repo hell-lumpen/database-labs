@@ -12,6 +12,7 @@ FROM organizers_of_events
 GROUP BY organizers.first_name, organizers.last_name
 HAVING AVG(events.duration) < (SELECT AVG(events.duration) FROM events);
 
+
 -- вывести мероприятия на которое записано менее 3 человек
 SELECT event_name, duration, COUNT(participant_id) as participants_count
 FROM participants_of_events
