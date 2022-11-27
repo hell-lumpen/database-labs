@@ -16,6 +16,8 @@ CREATE OR REPLACE PROCEDURE foo(id INTEGER,
     VALUES (id, event_name, start_time, program_id)
 $$;
 
+SELECT * FROM modified_view;
+
 CALL foo(10, 'event_name2', '11:00:00', 1);
 CALL foo(11, 'event_name3', '12:00:00', 2);
 
